@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import PageNav from '../src/components/PageNav/PageNav';
+
 
 function App() {
   return (
+    <>
+    <PageNav />
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +23,7 @@ function App() {
         </a>
       </header>
     </div>
+  </>
   );
 }
 
