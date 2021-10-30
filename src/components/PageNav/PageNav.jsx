@@ -5,15 +5,15 @@ import mohanMuruge from '../../assets/Image/Images/mohanMuruge.jpg';
 function PageNav() {
     return (
         <>
-        <nav class= "nav">
-            <div class="nav__header">
+        <nav className= "nav">
+            <div className="nav__header">
                 <img src={brainflixlogo} alt="Brainflix logo" />
             </div>
             <form action="">
-                <input type="search" name ="search-bar" value= "search"/>
-                <img class="avatar" src={mohanMuruge} alt="Image of Mohan Muruge" />
+                <input type="search" name ="search-bar" placeholder="search"/>
+                <img className="avatar" src={mohanMuruge} alt="Mohan Muruge" />
             </form>
-            <button class= "nav__header--button">Upload</button>
+            <button className= "nav__header--button">Upload</button>
         </nav>
     </>
     )
