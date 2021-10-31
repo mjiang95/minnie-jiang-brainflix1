@@ -1,5 +1,7 @@
 const NextVideoList = ({ clickHandler, nextVideos }) => {
     return (
+        <>
+        <h2>NEXT VIDEO</h2>
         <ul>
             {nextVideos.map((nextVideo) => (
                 <div key= {nextVideo.id}>
@@ -11,6 +13,7 @@ const NextVideoList = ({ clickHandler, nextVideos }) => {
                 </div>
             ))}
         </ul>
+        </>
     )
 }
 
