@@ -1,21 +1,49 @@
-// @use '../../styles/typography' as *;
-
-.video__container {
+.video {
+  &__container {
     width: 100%;
     padding-top: 56.25%;
     height: 0px;
     position: relative;
-    
-}
+  }
 
-.video__player {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+    &__player {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-// .video__title {
-//     font-family: $font-stack; 
-// }
+    &-description {
+        display: flex; 
+        margin: 1rem 5vw; 
+        border-bottom: 0.1rem solid #E1E1E1;
+
+        &__details {
+            width: 50vw; 
+            
+        }
+
+        &__title {
+        font-size: 2.5rem;
+        margin: 0 5vw; 
+        padding: 1.5rem 0;
+        border-bottom: 0.1rem solid #E1E1E1;
+        }
+    }
+
+    &__views {
+        display: flex; 
+    }
+
+    &__likes {
+        display: flex; 
+    }
+
+    &-details__description {
+        margin: 5vw; 
+        font-weight: 400; 
+    }
+
+  }
+

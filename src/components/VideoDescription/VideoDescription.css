@@ -1,0 +1,37 @@
+.video__container {
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0px;
+  position: relative;
+}
+.video__player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-description {
+  display: flex;
+  margin: 1rem 5vw;
+  border-bottom: 0.1rem solid #E1E1E1;
+}
+.video-description__details {
+  width: 50vw;
+}
+.video-description__title {
+  font-size: 2.5rem;
+  margin: 0 5vw;
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid #E1E1E1;
+}
+.video__views {
+  display: flex;
+}
+.video__likes {
+  display: flex;
+}
+.video-details__description {
+  margin: 5vw;
+  font-weight: 400;
+}/*# sourceMappingURL=VideoDescription.css.map */
