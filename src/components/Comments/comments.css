@@ -1,0 +1,46 @@
+.new-comments {
+  display: flex;
+  padding: 5vw;
+}
+.new-comments__label {
+  font-size: 1.5rem;
+  color: #E1E1E1;
+}
+.new-comments-input {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.new-comments__type-area {
+  height: 6rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 0.15rem solid #E1E1E1;
+  margin-bottom: 1rem;
+}
+.new-comments__avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  margin: 5vw 5vw 0 0;
+}
+.new-comments__button {
+  color: white;
+  background: #0095FF;
+  height: 2.5rem;
+  border-radius: #0095FF;
+  border-radius: 0.25rem;
+}
+
+.add-comments {
+  background-color: #0095FF;
+  color: white;
+  padding: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border: solid #0095FF;
+}
+.add-comments__section {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=comments.css.map */

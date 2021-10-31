@@ -1,0 +1,57 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variable" as *;
+
+.new-comments {
+    display: flex; 
+    padding: 5vw; 
+
+    &__label {
+        font-size: 1.5rem; 
+        color: #E1E1E1;
+    }
+
+    &-input {
+        display: flex; 
+        flex-direction: column; 
+        width: 80vw; 
+    }
+
+    &__type-area {
+        height: 6rem; 
+        width: 100%; 
+        border-radius: 0.25rem; 
+        border: 0.15rem solid #E1E1E1;
+        margin-bottom: 1rem; 
+    }
+
+    &__avatar {
+        height: 3rem; 
+        width: 3rem; 
+        border-radius: 1.5rem;
+        margin: 5vw 5vw 0 0; 
+        
+    }
+
+    &__button {
+        color:white; 
+        background: $color-blue;
+        height: 2.5rem; 
+        border-radius: $color-blue;
+        border-radius: 0.25rem; 
+    }
+}
+
+.add-comments {
+    background-color: $color-blue; 
+    color: white; 
+    padding: 0.5rem;
+    border-top-left-radius: 0.25rem; 
+    border-bottom-left-radius: 0.25rem;
+    border: solid $color-blue; 
+
+    &__section {
+        display: flex; 
+        justify-content: center;
+    }
+
+}
