@@ -3,7 +3,7 @@ const NextVideoList = ({ clickHandler, nextVideos }) => {
         <ul>
             {nextVideos.map((nextVideo) => (
                 <div key= {nextVideo.id}>
-                    <a onClick={() => { clickHandler(nextVideo.id) }} href="#">{nextVideo.image}</a>
+                    <img onClick={() => { clickHandler(nextVideo.id) }} src={nextVideo.image} alt="nextvideo thumbnail" />
                     <div>
                         <p>{nextVideo.title}</p>
                         <p>{nextVideo.channel}</p>

@@ -3,7 +3,9 @@
 
 .new-comments {
     display: flex; 
-    padding: 5vw; 
+    margin: 0 5vw; 
+    padding: 5vw 0; 
+    border-bottom: 0.15rem solid #E1E1E1; 
 
     &__label {
         font-size: 1.5rem; 
@@ -35,9 +37,11 @@
     &__button {
         color:white; 
         background: $color-blue;
-        height: 2.5rem; 
-        border-radius: $color-blue;
-        border-radius: 0.25rem; 
+        height: 3.5rem; 
+        border: $color-blue;
+        border-top-right-radius: 0.25rem; 
+        border-bottom-right-radius: 0.25rem; 
+        width: 100%; 
     }
 }
 
@@ -53,5 +57,44 @@
         display: flex; 
         justify-content: center;
     }
-
 }
+
+.user-comments {
+    border-bottom: 0.15rem soild black; 
+}
+
+.previous-comments {
+    display: flex; 
+    width: 90vw; 
+    justify-content: center;
+    margin: 5vw; 
+    border-bottom: 0.15rem solid #E1E1E1; 
+
+    &__subsection {
+        width: 75%; 
+    }
+    
+
+    &__avatar {
+        background-color: #E1E1E1; 
+        height: 2.25rem; 
+        width: 2.25rem; 
+        border-radius: 1.125rem;
+        margin-right: 1rem; 
+    }
+
+    &__title {
+        display: flex; 
+    }
+
+    &__name {
+        font-size: 0.8125rem; 
+        font-weight: 700;
+    }
+
+    &__comments {
+        font-size: 0.8125rem; 
+        font-weight: 400; 
+    }
+}
+

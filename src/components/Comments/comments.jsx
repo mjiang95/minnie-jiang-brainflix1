@@ -18,17 +18,19 @@ function Comments (props){
                 </form>
             </div>
         
-        <div>
-            {/* <img src="" alt="" />            */}
+            <div className="customer-comments">  
                {props.comments.comments.map((comment) => {
                     return (
-                    <div key={comment.id}>
-                        <div>
-                            <h2>{comment.name}</h2>,
-                            <p>{comment.timestamp}</p>
+                    <div className="previous-comments" key={comment.id}>
+                        <div className="previous-comments__avatar"></div> 
+                        <div className="previous-comments__subsection">
+                        <div className="previous-comments__title">
+                            <h2 className="previous-comments__name">{comment.name}</h2>,
+                            <p className="previous-comments__time">{comment.timestamp}</p>
                         </div>
                         <div>
-                            <h2>{comment.comment}</h2>
+                            <p  className="previous-comments__comments">{comment.comment}</p>
+                        </div>
                         </div>
                     </div>
                     )

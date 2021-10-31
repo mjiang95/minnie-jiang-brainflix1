@@ -1,6 +1,8 @@
 .new-comments {
   display: flex;
-  padding: 5vw;
+  margin: 0 5vw;
+  padding: 5vw 0;
+  border-bottom: 0.15rem solid #E1E1E1;
 }
 .new-comments__label {
   font-size: 1.5rem;
@@ -27,9 +29,11 @@
 .new-comments__button {
   color: white;
   background: #0095FF;
-  height: 2.5rem;
-  border-radius: #0095FF;
-  border-radius: 0.25rem;
+  height: 3.5rem;
+  border: #0095FF;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  width: 100%;
 }
 
 .add-comments {
@@ -43,4 +47,37 @@
 .add-comments__section {
   display: flex;
   justify-content: center;
+}
+
+.user-comments {
+  border-bottom: 0.15rem soild black;
+}
+
+.previous-comments {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  margin: 5vw;
+  border-bottom: 0.15rem solid #E1E1E1;
+}
+.previous-comments__subsection {
+  width: 75%;
+}
+.previous-comments__avatar {
+  background-color: #E1E1E1;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 1.125rem;
+  margin-right: 1rem;
+}
+.previous-comments__title {
+  display: flex;
+}
+.previous-comments__name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.previous-comments__comments {
+  font-size: 0.8125rem;
+  font-weight: 400;
 }/*# sourceMappingURL=comments.css.map */
