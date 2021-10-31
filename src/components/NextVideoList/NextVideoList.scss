@@ -1,0 +1,41 @@
+.video {
+    margin: 5vw; 
+}
+
+.video {
+
+    &-list {
+        display: flex; 
+        
+
+    &__details {
+        display: flex;
+        flex-direction: column; 
+
+        & h3 {
+            font-size: 1rem; 
+            margin: 0 0 1rem 0; 
+        }
+        
+        & p {
+            margin: 0; 
+        }
+
+    }
+
+
+
+    &__thumbnail {
+        width: 8rem;
+        height: 5rem; 
+        border-radius: 0.25rem; 
+        margin: 0 5vw 5vw 0; 
+    }
+}
+
+    &__title {
+    color: #E1E1E1; 
+    font-size: 0.8125rem;
+    } 
+
+}

@@ -3,6 +3,12 @@ import views from "../../assets/Image/Icons/views.svg";
 import likes from "../../assets/Image/Icons/likes.svg";
 
 function VideoDescription(props) {
+
+  let time = new Date(props.videoDetails.timestamp);
+  time = time.toLocaleString().slice(0,10);
+  time = time.replace(/,/g, '');
+  time = time.trim(); 
+
   return (
     <section className="video">
       <div className="video__container">
@@ -12,7 +18,7 @@ function VideoDescription(props) {
       <div className="video-description">
         <div className="video-description__details">
           <h2 className="video-description__channel">By {props.videoDetails.channel}</h2>
-          <p className="video-description__date">{props.videoDetails.title}</p>
+          <p className="video-description__date">{time}</p>
         </div>
         <div className="video-description__details">
           <div className="video__views">

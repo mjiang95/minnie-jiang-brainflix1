@@ -1,0 +1,28 @@
+.previous-comments {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  margin: 5vw;
+  border-bottom: 0.15rem solid #E1E1E1;
+}
+.previous-comments__subsection {
+  width: 75%;
+}
+.previous-comments__avatar {
+  background-color: #E1E1E1;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 1.125rem;
+  margin-right: 1rem;
+}
+.previous-comments__title {
+  display: flex;
+}
+.previous-comments__name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.previous-comments__comments {
+  font-size: 0.8125rem;
+  font-weight: 400;
+}/*# sourceMappingURL=timestamp.css.map */

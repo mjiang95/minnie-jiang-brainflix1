@@ -1,10 +1,12 @@
 import "./comments.scss";
 import mohanMuruge from "../../assets/Image/Images/mohanMuruge.jpg";
 import addcomments from "../../assets/Image/Icons/add_comment.svg";
+import { v4 as uuidv4 } from 'uuid';
+import TimeStamp from "../timestamp/timestamp";
 
 
 function Comments (props){
-    return (
+    return ( 
         <section className= "user-comments">
             <div className= "new-comments">
                 <img className="new-comments__avatar" src={mohanMuruge} alt="Picture of Mohan Muruge" />
@@ -17,25 +19,17 @@ function Comments (props){
                     </div>
                 </form>
             </div>
-        
+            
             <div className="customer-comments">  
-               {props.comments.comments.map((comment) => {
+               {props.comments.comments.map(comment => {
+                
                     return (
-                    <div className="previous-comments" key={comment.id}>
-                        <div className="previous-comments__avatar"></div> 
-                        <div className="previous-comments__subsection">
-                        <div className="previous-comments__title">
-                            <h2 className="previous-comments__name">{comment.name}</h2>,
-                            <p className="previous-comments__time">{comment.timestamp}</p>
-                        </div>
-                        <div>
-                            <p  className="previous-comments__comments">{comment.comment}</p>
-                        </div>
-                        </div>
-                    </div>
+                        <TimeStamp
+                            key={uuidv4()}
+                            comment={comment}
+                        />
                     )
-                }
-                 )}
+                })}
         </div>
     </section>
     )
