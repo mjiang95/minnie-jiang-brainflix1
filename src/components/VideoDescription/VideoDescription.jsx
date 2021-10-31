@@ -1,12 +1,12 @@
-
+import './VideoDescription.scss';
 
  function VideoDescription(props) {
 
     return (
-        <section>
-        <div className="video">
-            <video className="video__player" poster={props.videoDetails.image}>
-            </video>
+        <section className= "video">
+        <div className="video__container">
+            <video className="video__player" controls poster={props.videoDetails.image}>
+        </video>
         </div>
             <h1 className="video-description__title">{props.videoDetails.title}</h1>
         <div className="video-description__details">

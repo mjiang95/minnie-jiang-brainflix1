@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import PageNav from "../src/components/PageNav/PageNav";
 import VideoDetailsJSON from "../src/Data/video-details.json";
 import VideosJSON from "../src/Data/videos.json";
