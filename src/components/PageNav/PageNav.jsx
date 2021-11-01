@@ -10,17 +10,18 @@ function PageNav() {
       <div className="nav__header">
         <img className="brainflix-logo" src={brainflixlogo} alt="Brainflix logo"/>
       </div>
-      
-            <form className="search" action="">
-                <img className="search-icon" src={search} alt="search-icon" />
-                <input className="search-bar" type="search" name="search-bar" placeholder="search"/>
-                <img className="avatar1" src={mohanMuruge} alt="Mohan Muruge" />
-            </form>
-            <div className="nav__button">
-                <img className="upload-image" src={upload} alt="upload-image" />
-                <button className="nav__button--click">UPLOAD</button>
-            </div>
-            <img className="avatar2" src={mohanMuruge} alt="Mohan Muruge" /> 
+      <div className="function-header">
+        <form className="search" action="">
+          <img className="search-icon" src={search} alt="search-icon" />
+          <input className="search-bar" type="search" name="search-bar" placeholder="search"/>
+          <img className="avatar1" src={mohanMuruge} alt="Mohan Muruge" />
+        </form>
+        <div className="nav__button">
+          <img className="upload-image" src={upload} alt="upload-image" />
+          <button className="nav__button--click">UPLOAD</button>
+        </div>
+        <img className="avatar2" src={mohanMuruge} alt="Mohan Muruge" />
+      </div>
     </nav>
   );
 }

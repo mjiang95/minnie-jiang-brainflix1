@@ -2,63 +2,102 @@
 @use "../../styles/variable" as *;
 
 .new-comments {
-    display: flex; 
-    margin: 0 5vw; 
-    padding: 5vw 0; 
-    border-bottom: 0.15rem solid #E1E1E1; 
+  display: flex;
+  margin: 0 5vw;
+  padding: 5vw 0;
+  border-bottom: 0.15rem solid #e1e1e1;
 
-    &__label {
-        font-size: 1.5rem; 
-        color: #E1E1E1;
+  @include desktop {
+    margin: 0 0 0 5vw;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    color: #e1e1e1;
+  }
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center; 
+      justify-content: space-around; 
     }
 
-    &-input {
-        display: flex; 
-        flex-direction: column; 
-        width: 80vw; 
+    @include desktop {
+      justify-content: space-evenly;
     }
+  }
 
-    &__type-area {
-        height: 6rem; 
-        width: 100%; 
-        border-radius: 0.25rem; 
-        border: 0.15rem solid #E1E1E1;
-        margin-bottom: 1rem; 
-    }
+  &__type-area {
+    height: 6rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 0.15rem solid #e1e1e1;
+    margin-bottom: 1rem;
 
-    &__avatar {
-        height: 3rem; 
-        width: 3rem; 
-        border-radius: 1.5rem;
-        margin: 5vw 5vw 0 0; 
-        
+    @include tablet {
+      height: 3rem;
     }
+  }
 
-    &__button {
-        color:white; 
-        background: $color-blue;
-        height: 3.5rem; 
-        border: $color-blue;
-        border-top-right-radius: 0.25rem; 
-        border-bottom-right-radius: 0.25rem; 
-        width: 100%; 
+  &__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    margin: 5vw 5vw 0 0;
+  }
+
+  &__button {
+    color: white;
+    background: $color-blue;
+    height: 3.5rem;
+    border: $color-blue;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    width: 100%;
+
+    @include tablet {
+      height: 40%;
     }
+  }
 }
 
 .add-comments {
-    background-color: $color-blue; 
-    color: white; 
-    padding: 0.5rem;
-    border-top-left-radius: 0.25rem; 
-    border-bottom-left-radius: 0.25rem;
-    border: solid $color-blue; 
+  background-color: $color-blue;
+  color: white;
+  padding: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border: solid $color-blue;
 
-    &__section {
-        display: flex; 
-        justify-content: center;
+  @include tablet {
+    height: 20%;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      align-items: center; 
+      height: 100%; 
     }
+
+    @include desktop {
+      align-items: center;
+    }
+  }
 }
 
 .user-comments {
-    border-bottom: 0.15rem soild black; 
+  border-bottom: 0.15rem soild black;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
 }

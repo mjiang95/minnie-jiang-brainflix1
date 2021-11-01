@@ -1,8 +1,10 @@
-@use "./styles/typography" as *; 
+@use "./styles/typography" as *;
+@use "./styles/mixin" as *;
+@use "./styles/variable" as *;
 
 .App {
   text-align: center;
-  font-family: $font-stack; 
+  font-family: $font-stack;
 }
 
 .App-logo {
@@ -37,5 +39,19 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.video-list {
+  &__app {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__comments {
+    @include desktop {
+      width: 60%;
+    }
   }
 }
