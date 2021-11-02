@@ -5,8 +5,12 @@ import VideoDetailsJSON from "../src/Data/video-details.json";
 import VideosJSON from "../src/Data/videos.json";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
 import NextVideoList from "./components/NextVideoList/NextVideoList";
-import Comments from "./components/comments/comments";
+import Comments from "./components/Comments/comments";
 import VideoPlayer from "./components/videoplayer/videoplayer";
+import {BrowserRouter, Switch, Route} from "react-router-dom"; 
+import Home from "./Page/Home/home";
+import Upload from "./Page/Upload/upload";
+import VideoDetails from "./Page/VideoDetails/vidodetails";
 
 class App extends Component {
   state = {
@@ -37,8 +41,14 @@ class App extends Component {
     });
 
     return (
+      <BrowserRouter>
       <section>
         <PageNav />
+          <Switch>
+              <Route path= "/" exact component={Home} />
+              <Route path= "/videodetails" component={VideoDetails} />
+              <Route path= "/upload" component={Upload} />
+          </Switch>
         <VideoPlayer videoDetails={this.state.currentVideoDetails} />
         <div className="video-list__app">
           <div className="video-list__comments">
@@ -53,6 +63,7 @@ class App extends Component {
           </div>
         </div>
       </section>
+      </BrowserRouter>
     );
   }
 }
