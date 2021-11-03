@@ -11,6 +11,12 @@
   margin: 1rem 5vw;
   border-bottom: 0.1rem solid #e1e1e1;
 }
+.video-description__channel {
+  font-size: 1rem;
+}
+.video-description__date {
+  margin: 0 0 0 1rem;
+}
 .video-description__details {
   width: 50vw;
 }
@@ -32,6 +38,7 @@
 }
 .video__likes {
   display: flex;
+  padding: 0 0 0 1rem;
 }
 .video-details__description {
   margin: 5vw;

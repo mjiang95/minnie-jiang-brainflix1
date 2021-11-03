@@ -1,0 +1,20 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixin" as *;
+@use "../../styles/variable" as *;
+
+
+
+.video-list {
+    &__app {
+      @include desktop {
+        display: flex;
+      }
+    }
+  
+    &__comments {
+      @include desktop {
+        width: 60%;
+      }
+    }
+  }
+  
