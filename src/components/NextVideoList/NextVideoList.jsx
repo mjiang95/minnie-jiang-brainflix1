@@ -8,7 +8,7 @@ const NextVideoList = ({nextVideos}) => {
       {nextVideos.map((nextVideo) => ( 
         <div className="video-list" >
          <Link to = {`/videodetails/` + nextVideo.id} key={nextVideo.id}>
-          <img className="video-list__thumbnail" 
+          <img className= "video-list__thumbnail" 
             src={nextVideo.image}
             alt="nextvideo thumbnail"
           />

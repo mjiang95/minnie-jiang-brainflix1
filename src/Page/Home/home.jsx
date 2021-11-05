@@ -64,7 +64,7 @@ class Home extends Component {
       };
     
       let filteredVideos = this.state.videos.filter((video) => {
-        return video.id !== currentSelectedVideo.comments.id
+        return video.id !== currentSelectedVideo.id
       }); 
 
   
