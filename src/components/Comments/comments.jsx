@@ -3,6 +3,9 @@ import mohanMuruge from "../../assets/Image/Images/mohanMuruge.jpg";
 import addcomments from "../../assets/Image/Icons/add_comment.svg";
 
 function Comments(props) {
+
+  console.log(props)
+
   return (
     <section className="user-comments">
       <div className="new-comments">
@@ -39,7 +42,9 @@ function Comments(props) {
       </div>
 
       <div className="customer-comments">
-        {props.comments.comments.map((comment) => {
+
+        {props.comments.map((comment) => {
+ 
           return (
             <div className="previous-comments" key={comment.id}>
               <div className="previous-comments__avatar"></div>
@@ -58,7 +63,8 @@ function Comments(props) {
               </div>
             </div>
           );
-        })}
+        }
+      )}
       </div>
     </section>
   );

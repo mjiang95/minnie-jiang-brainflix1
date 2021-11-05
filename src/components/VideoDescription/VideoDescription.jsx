@@ -8,6 +8,8 @@ function VideoDescription(props) {
   time = time.replace(/,/g, "");
   time = time.trim();
 
+  console.log(props)
+
   return (
     <section className="video">
       <h1 className="video-description__title">{props.videoDetails.title}</h1>

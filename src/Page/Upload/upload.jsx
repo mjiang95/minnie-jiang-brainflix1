@@ -3,30 +3,29 @@ import "./upload.scss";
 
 function Upload() {
     return (
-        <section>
-            <div>
+        <section className= "upload-video">
+            <div className= "upload-video-section">
                 <h1 className="upload-video__title">
                     Upload Video
                 </h1>
             </div>
-            <div>
-                <h2>VIDEO THUMBNAIL</h2>
-                <video src=""></video>
-            </div>
-            <div>
-                <form>
-                    <div>
-                        <label htmlFor="input__title">TITLE YOUR VIDEO</label>
-                        <input type="text" name="input__title" placeholder="Add a title to your video"/>
-                        <label htmlFor="input__description">ADD A VIDEO DESCRIPTION</label>
-                        <input type="text" name="input__description" placeholder="Add a description to your video"/>
+            <div className= "upload-video__components">
+                    <div className="upload-video__main-component">
+                        <h2 className="upload-video__subtitle">VIDEO THUMBNAIL</h2>
+                        <video className="upload-video__video-player" src=""></video>
                     </div>
-                    <div>
-                        <input type="submit" />
-                        <input type="button" value="cancel" />
+                    <div className= "upload-video__details">
+                        <label className="input-title__label" htmlFor="input__title">TITLE YOUR VIDEO</label>
+                        <input type="text" className="input__title" name="input__title" placeholder="Add a title to your video"/>
+                        <label className="input-description__label"htmlFor="input__description">ADD A VIDEO DESCRIPTION</label>
+                        <input type="text" className="input__description"name="input__description" placeholder="Add a description to your video"/>
                     </div>
-                </form>
             </div>
+                    <div className= "upload-video__cta">
+                        <input className="publish" type="button" value="PUBLISH"/>
+                        <input className="cancel" type="button" value="CANCEL" />
+                        <input className="publish1" type="button" value="PUBLISH"/>
+                    </div>
         </section>
     )
 }

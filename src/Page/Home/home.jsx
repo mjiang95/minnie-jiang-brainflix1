@@ -6,49 +6,87 @@ import NextVideoList from "../../components/NextVideoList/NextVideoList";
 import Comments from "../../components/Comments/comments";
 import VideoPlayer from "../../components/videoplayer/videoplayer";
 import "./home.scss"; 
-
+import axios from "axios";
+// import { API_KEY_STRING, videosURL } from '../../utilities/index';
 
 class Home extends Component {
+
+
     state = {
-      videos: VideosJSON,
-      videoDetails: VideoDetailsJSON,
-      currentVideoDetails: VideoDetailsJSON[0],
+      videos: [],
+      currentSelectedVideo: {}
     };
 
-    updateSelectedVideo = (videoId) => {
-      const newSelectedVideoDetails = this.state.videoDetails.find((video) => {
-        return videoId === video.id;
+    componentDidMount() {
+      axios 
+        .get("https://project-2-api.herokuapp.com/videos?api_key=00825317-53ca-4b2d-86ba-230bda09cd40")
+        .then((response) => { 
+          console.log(this)
+          this.setState ({
+            videos: response.data
+          })
+
+          const videoId = this.props.match.params.videoId || response.data[0].id;
+
+          this.getVideoById(videoId);
+        })
+    }
+
+    componentDidUpdate(prevProps) {
+      const videoId = this.props.match.params.videoId;
+      const prevVideoId = prevProps.match.params.videoId; 
+      console.log(videoId)
+    
+
+      if (videoId !== prevVideoId) {
+        this.getVideoById(videoId);
+      }
+    
+    }
+
+    getVideoById = (id) => {
+      axios
+      .get("https://project-2-api.herokuapp.com/videos/" + id + "?api_key=00825317-53ca-4b2d-86ba-230bda09cd40")
+      .then((response) => {
+        console.log(response)
+        this.setState ({
+          currentSelectedVideo: response.data  
+        });
       });
-  
-      this.setState({
-        currentVideoDetails: newSelectedVideoDetails,
-      });
-    };
-  
+    }
+
+
     render() {
-      const { videos, currentVideoDetails } = this.state;
-      const filterVideos = videos.filter((video) => {
-        return video.id !== currentVideoDetails.id;
-      });
+      const { currentSelectedVideo } = this.state; 
+
+      if ( !this.state.currentSelectedVideo.id ){
+        return <p>Page loading...</p>
+      };
+    
+      let filteredVideos = this.state.videos.filter((video) => {
+        return video.id !== currentSelectedVideo.comments.id
+      }); 
+
   
       return (
-        <section>
-          <VideoPlayer videoDetails={this.state.currentVideoDetails} />
+        <>
+      <section>
+          <VideoPlayer videoDetails={currentSelectedVideo} />
           <div className="video-list__app">
             <div className="video-list__comments">
-              <VideoDescription videoDetails={this.state.currentVideoDetails} />
-              <Comments comments={this.state.currentVideoDetails} />
+              <VideoDescription videoDetails={currentSelectedVideo} />
+              <Comments comments= {currentSelectedVideo.comments}/>
             </div>
             <div className="video-list__list">
-              <NextVideoList
-                clickHandler={this.updateSelectedVideo}
-                nextVideos={filterVideos}
+              <NextVideoList 
+              nextVideos= {filteredVideos}
               />
-            </div>
+              </div>
           </div>
         </section>
-      );
-    }
+        </>
+          );
+      }
   }
   
 

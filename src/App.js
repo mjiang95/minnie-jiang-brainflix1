@@ -4,7 +4,7 @@ import PageNav from "../src/components/PageNav/PageNav";
 import {BrowserRouter, Switch, Route} from "react-router-dom"; 
 import Home from "./Page/Home/home";
 import Upload from "./Page/Upload/upload";
-import VideoDetails from "./Page/VideoDetails/vidodetails";
+// import VideoDetails from "./Page/VideoDetails/vidodetails";
 
 class App extends Component {
 
@@ -17,7 +17,7 @@ class App extends Component {
         <PageNav />
           <Switch>
               <Route path= "/" exact component={Home} />
-              <Route path= "/videodetails" component={VideoDetails} />
+              <Route path= "/videodetails/:videoId" component={Home} />
               <Route path= "/upload" component={Upload} />
           </Switch>
       </section>

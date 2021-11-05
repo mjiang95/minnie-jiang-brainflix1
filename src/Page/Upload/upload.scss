@@ -1,1 +1,140 @@
+@use "../../styles/typography" as *;
+@use "../../styles/mixin" as *;
+@use "../../styles/variable" as *;
 
+.upload-video {
+
+    &-section {
+        padding: 0 5vw;
+        border-top: 0.1rem solid #E1E1E1; 
+    }
+
+    &__title {
+        font-size: 2.5rem; 
+        font-weight: 600; 
+    }
+
+    &__component {
+        @include desktop {
+        display: flex;
+        }
+    }
+
+    &__main-component {
+        padding: 0 5vw; 
+
+        @include desktop {
+            width: 50vw; 
+        }
+    }
+
+    &__subtitle {
+        color: #AFAFAF; 
+        font-weight: 400;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction:column; 
+        padding: 5vw; 
+
+        @include desktop {
+            width: 40vw;
+        }
+    }
+
+    &__video-player {
+
+        @include desktop {
+            width: 50vw;
+        }
+    }
+
+
+    &__cta {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        border-top: 0.15rem solid #AFAFAF; 
+        margin: 0 1rem; 
+
+        @include tablet {
+            display: flex; 
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.input {
+
+    &-title__label {
+        font-size: 1rem; 
+        color: #AFAFAF; 
+    }
+
+    &-description__label {
+        font-size: 1rem; 
+        color: #AFAFAF; 
+    }
+
+    &__title {
+        height: 3rem; 
+        width: 90vw; 
+        margin: 1rem 0;  
+    }
+
+    &__description {
+        height: 6rem; 
+        width: 90vw; 
+        margin: 1rem 0;
+    }
+ 
+}
+
+.publish {
+    width: 90vw; 
+    height: 2rem; 
+    background-color: $color-blue;
+    color: white; 
+    border: 0.1rem solid $color-blue;
+    border-radius: 0.25rem; 
+    margin: 5vw 0 1rem 0; 
+    
+    @include tablet {
+        display:none; 
+    }
+}
+
+.cancel {
+    width: 90vw; 
+    height: 2rem; 
+    background-color: white;
+    color: $color-blue; 
+    border: 0.1rem solid white;
+    border-radius: 0.25rem; 
+    margin: 1rem 0; 
+
+    @include tablet {
+        height: 3rem; 
+        width: 9rem; 
+        margin: 5vw; 
+    }
+}
+
+.publish1{
+   
+    display:none; 
+
+    @include tablet {
+    display: inline; 
+    width: 9rem; 
+    height: 3rem; 
+    background-color: $color-blue;
+    color: white; 
+    border: 0.1rem solid $color-blue;
+    border-radius: 0.25rem; 
+    margin: 5vw; 
+    }
+}
