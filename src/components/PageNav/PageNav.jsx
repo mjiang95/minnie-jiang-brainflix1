@@ -3,7 +3,7 @@ import brainflixlogo from "../../assets/Image/Logo/BrainFlix-logo.svg";
 import mohanMuruge from "../../assets/Image/Images/mohanMuruge.jpg";
 import search from "../../assets/Image/Icons/search.svg";
 import upload from "../../assets/Image/Icons/upload.svg";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function PageNav() {
   return (
@@ -20,9 +20,10 @@ function PageNav() {
         <div className="nav__button">
           <img className="upload-image" src={upload} alt="upload-image" />
         <div>
-          <button className="nav__button--click">
-          <NavLink to="/upload"
-          >UPLOAD</NavLink></button>
+          
+          <Link to="/upload" className="upload">
+          <button className="nav__button--click" >UPLOAD</button>
+          </Link>
         </div>
         </div>
         <img className="avatar2" src={mohanMuruge} alt="Mohan Muruge" />

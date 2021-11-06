@@ -1,6 +1,4 @@
 import { Component } from 'react';
-import VideoDetailsJSON from "../../Data/video-details.json";
-import VideosJSON from "../../Data/videos.json";
 import VideoDescription from "../../components/VideoDescription/VideoDescription";
 import NextVideoList from "../../components/NextVideoList/NextVideoList";
 import Comments from "../../components/Comments/comments";
@@ -71,7 +69,7 @@ class Home extends Component {
       return (
         <>
       <section>
-          <VideoPlayer videoDetails={currentSelectedVideo} />
+          <VideoPlayer videoDetails= {currentSelectedVideo} />
           <div className="video-list__app">
             <div className="video-list__comments">
               <VideoDescription videoDetails={currentSelectedVideo} />

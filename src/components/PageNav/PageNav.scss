@@ -34,6 +34,7 @@
 
         
         &--click {
+            text-decoration: none; 
             background-color: $color-blue;
             border: $color-blue;
             border-top-left-radius: none; 
@@ -141,4 +142,8 @@
         justify-content: space-around;
         width: 55%; 
     }
+}
+
+.upload {
+    text-decoration: none; 
 }
