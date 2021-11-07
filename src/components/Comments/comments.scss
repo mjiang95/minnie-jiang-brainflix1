@@ -44,6 +44,11 @@
       height: 3rem;
       width: 110%;
     }
+
+    @include desktop {
+      width: 95%; 
+    }
+
   }
 
   &__avatar {
@@ -67,7 +72,11 @@
     width: 100%;
 
     @include tablet {
-      height: 40%;
+      height: 41%;
+    }
+
+    @include desktop {
+      height: 3.25rem;
     }
   }
 }
@@ -81,7 +90,11 @@
   border: solid $color-blue;
 
   @include tablet {
-    height: 20%;
+    height: 25%;
+  }
+
+  @include desktop {
+    height: 2rem; 
   }
 
   &__section {
@@ -115,48 +128,7 @@
   margin: 5vw;
   border-bottom: 0.15rem solid #e1e1e1;
 
-  @include desktop {
-    margin: 0 0 0 5vw;
-    width: 55vw;
-  }
-
-  &__subsection {
-    width: 75%;
-  }
-
-  &__avatar {
-    background-color: #e1e1e1;
-    height: 2.25rem;
-    width: 2.25rem;
-    border-radius: 1.125rem;
-    margin: 3vw 1rem 0 0;
-  }
-
-  &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__name {
-    font-size: 0.8125rem;
-    font-weight: 700;
-  }
-
-  &__comments {
-    font-size: 0.8125rem;
-    font-weight: 400;
-  }
-}
-.previous-comments {
-  display: flex;
-  width: 90vw;
-  justify-content: center;
-  margin: 5vw;
-  border-bottom: 0.15rem solid #e1e1e1;
-
   @include tablet {
-    padding: 5vw 0;  
     margin: 0 5vw; 
   }
 
@@ -193,3 +165,4 @@
     font-weight: 400;
   }
 }
+

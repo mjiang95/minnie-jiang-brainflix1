@@ -1,16 +1,17 @@
 .video {
   &__container {
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 50.25%;
     height: 0px;
     position: relative;
+    background: black; 
   }
 
   &__player {
-    width: 100%;
+    width: 90%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5vw;
   }
 }

@@ -4,7 +4,6 @@ import addcomments from "../../assets/Image/Icons/add_comment.svg";
 
 function Comments(props) {
 
-  console.log(props)
 
   return (
     <section className="user-comments">
@@ -14,7 +13,7 @@ function Comments(props) {
           src={mohanMuruge}
           alt="Picture of Mohan Muruge"
         />
-        <form className="new-comments-input" action="">
+        <form className="new-comments-input" onSubmit={props.formSubmit}>
           <div className="user-comments__section">
             <label className="new-comments__label" htmlFor="comments">
               JOIN THE CONVERSATION
@@ -34,7 +33,7 @@ function Comments(props) {
             />
             <input
               className="new-comments__button"
-              type="button"
+              type="submit"
               value="COMMENT"
             />
           </div>
