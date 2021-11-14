@@ -1,0 +1,43 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variable" as *;
+
+.previous-comments {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  margin: 5vw;
+  border-bottom: 0.15rem solid #e1e1e1;
+
+  @include desktop {
+    margin: 0 0 0 5vw;
+    width: 55vw;
+  }
+
+  &__subsection {
+    width: 75%;
+  }
+
+  &__avatar {
+    background-color: #e1e1e1;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 1.125rem;
+    margin: 3vw 1rem 0 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  &__comments {
+    font-size: 0.8125rem;
+    font-weight: 400;
+  }
+}
