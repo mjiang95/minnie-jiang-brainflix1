@@ -9,7 +9,9 @@ function PageNav() {
   return (
     <nav className="nav">
       <div className="nav__header">
+        <Link to="/" className="home">
         <img className="brainflix-logo" src={brainflixlogo} alt="Brainflix logo"/>
+        </Link>
       </div>
       <div className="function-header">
         <form className="search" action="">
